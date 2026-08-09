@@ -1,4 +1,4 @@
-1. [NiCOlit](../data/nicolit/NiCOlit.csv) (2000 reactions) Ni catalyzed C-O coupling dataset. 
+1. [NiCOlit](https://github.com/julschleinitz/NiCOlit/tree/master) (2000 reactions) Ni catalyzed C-O coupling dataset. 
 
 issues: both analytical and isolated yields
 
@@ -35,3 +35,37 @@ Schema:
 | 26 | `review`                      | String    | YES      |          |
 | 27 | `Mechanism`                   | String    | YES      |          |
 
+2. [OpenExp](https://osf.io/e68v4/files/3dv4k) 
+open-source dataset of chemical reactions paired with structured experimental procedures.
+https://aclanthology.org/2024.findings-acl.318/
+
+The dataset contains 274,439 reaction–procedure pairs. It was created from:
+- USPTO-Applications — patent reactions
+- Open Reaction Database (ORD) — experimental reactions
+
+3. AstraZeneca ELN derived dataset https://github.com/nsf-c-cas/yield-rxn/blob/master/data/az/processed-0/az_no_rdkit.csv
+
+source_dataset:
+    AstraZeneca ELN Buchwald–Hartwig
+
+source_repository:
+    nsf-c-cas/yield-rxn
+
+raw_records:
+    1000
+
+paper_curated_records:
+    781
+
+ML_processed_records:
+    750
+
+reaction_class:
+    Buchwald–Hartwig C–N coupling
+
+yield:
+    numerical percentage
+
+4. https://github.com/rxn4chemistry/rxn_yields/blob/master/README.md#uspto-data-sets 
+
+5. https://github.com/blaiszik/awesome-matchem-datasets/blob/main/README.md
