@@ -66,6 +66,67 @@ reaction_class:
 yield:
     numerical percentage
 
+Root
+└── reactions: array[750]
+    └── reaction: object
+        ├── reaction_Num
+        ├── product
+        ├── reactants[]
+        ├── base
+        ├── solvent[]
+        ├── yield
+        ├── temperature
+        ├── volume
+        ├── amine_amount
+        ├── halide_amount
+        ├── ligand_amount
+        ├── metal_amount
+        └── base_amount
+
+| Field                                | Type            | Description             |
+| :----------------------------------- | --------------- | ----------------------: |
+| `reaction_Num`                       | `int`           | Reaction identifier     |
+| `product`                            | `object`        | Product information     |
+| `product.name`                       | `string`        | Product name            |
+| `product.CID`                        | `string`        | PubChem CID             |
+| `product.smiles`                     | `string`        | Product SMILES          |
+| `reactants`                          | `array[object]` | Reactant molecules      |
+| `reactants[].HOMO_energy`            | `string`        | HOMO energy             |
+| `reactants[].LUMO_energy`            | `string`        | LUMO energy             |
+| `reactants[].atoms`                  | `array[object]` | Atomic-level properties |
+| `reactants[].atoms[].atomic_num`     | `string`        | Atomic number           |
+| `reactants[].atoms[].name`           | `string`        | Atom identifier         |
+| `reactants[].atoms[].nmr_shift`      | `float`         | NMR chemical shift      |
+| `reactants[].atoms[].partial_charge` | `string`        | Partial atomic charge   |
+| `reactants[].category`               | `string`        | Reactant category       |
+| `reactants[].dipole_moment`          | `string`        | Dipole moment           |
+| `reactants[].electronegativity`      | `float`         | Electronegativity       |
+| `reactants[].hardness`               | `float`         | Chemical hardness       |
+| `reactants[].molecular_weight`       | `string`        | Molecular weight        |
+| `reactants[].name`                   | `string`        | Reactant name           |
+| `reactants[].ovality`                | `float`         | Ovality                 |
+| `reactants[].CID`                    | `string`        | Compound identifier     |
+| `reactants[].smiles`                 | `string`        | Reactant SMILES         |
+| `reactants[].surface_area`           | `float`         | Molecular surface area  |
+| `reactants[].volume`                 | `float`         | Molecular volume        |
+| `reactants[].nbo_atom`               | `array`         | NBO atomic information  |
+| `reactants[].nbo_bond`               | `array`         | NBO bond information    |
+| `base`                               | `object`        | Base information        |
+| `base.pka`                           | `string`        | pKa                     |
+| `base.smiles`                        | `string`        | Base SMILES             |
+| `solvent`                            | `array[string]` | Solvent SMILES          |
+| `yield.yield`                        | `float`         | Reaction yield          |
+| `temperature`                        | `float`         | Reaction temperature    |
+| `volume`                             | `float`         | Reaction volume         |
+| `amine_amount`                       | `float`         | Amine amount            |
+| `halide_amount`                      | `float`         | Halide amount           |
+| `ligand_amount`                      | `float`         | Ligand amount           |
+| `metal_amount`                       | `float`         | Metal amount            |
+| `base_amount`                        | `float`         | Base amount             |
+
+
 4. https://github.com/rxn4chemistry/rxn_yields/blob/master/README.md#uspto-data-sets 
 
 5. https://github.com/blaiszik/awesome-matchem-datasets/blob/main/README.md
+
+6. Pfizer HiTEA https://github.com/emmaking-smith/HiTEA 39000 reactions, analytical yield 
